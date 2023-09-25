@@ -1,0 +1,33 @@
+#include <iostream>
+#include<string>
+
+struct Account
+{
+    unsigned int countNumber = 0;
+    std::string name;
+    unsigned int balance = 0;
+};
+
+void requestNewBalance(Account& account)
+{
+   
+    std::cout << "Enter your new balance:" << std::endl;
+    std::cin >> account.balance;
+      
+}
+int main()
+{
+    Account count;
+    std::cout << "Enter your count number:" << std::endl;
+    std::cin >> count.countNumber;
+    std::cout << "Enter your Name:" << std::endl;
+    std::cin >> count.name;
+    std::cout << "Enter your balance:" << std::endl;
+    std::cin >> count.balance;
+
+    requestNewBalance(count);
+    
+    std::cout << "Your information:" << count.name << ", " << count.countNumber << ", " << count.balance << std::endl;
+    
+    return 0;
+}

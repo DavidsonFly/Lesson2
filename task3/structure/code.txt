@@ -1,0 +1,41 @@
+#include <iostream>
+#include<string>
+
+struct Moscow
+{
+    std::string city;
+    std::string street;
+    int homeNum;
+    int flatNum;
+    int postCale;
+};
+
+void printAdress(Moscow& adress)
+{
+    Moscow* adress_array = new Moscow[1];
+    adress_array[0].city = "Moscow";
+    adress_array[0].street = "Arbat";
+    adress_array[0].homeNum = 12;
+    adress_array[0].flatNum = 8;
+    adress_array[0].postCale = 12345;
+
+    for (int i = 0; i < 1; i++)
+    {
+        std::cout << "City:" << " " << adress_array[i].city << std::endl;
+        std::cout << "Street:" << " " << adress_array[i].street << std::endl;
+        std::cout << "Home number:" << " " << adress_array[i].homeNum << std::endl;
+        std::cout << "Flat number:" << " " << adress_array[i].flatNum << std::endl;
+        std::cout << "Postcale:" << " " << adress_array[i].postCale << std::endl;
+
+    }
+
+    delete[] adress_array;
+}
+int main()
+{
+    Moscow print;
+
+        printAdress(print);
+
+        return 0;
+}
